@@ -1,0 +1,1 @@
+-include build/make/target/board/generic_arm64_ab/BoardConfig.mk
