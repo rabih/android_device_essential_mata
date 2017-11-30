@@ -130,6 +130,7 @@ BOARD_KERNEL_CMDLINE := androidboot.hardware=mata user_debug=31 ehci-hcd.park=3
 BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1 service_locator.enable=1
 BOARD_KERNEL_CMDLINE += swiotlb=2048 androidboot.configfs=true
 BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=a800000.dwc3 cma=32M@0-0xffffffff
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x02000000
@@ -164,12 +165,7 @@ BOARD_USES_QC_TIME_SERVICES := true
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 PRODUCT_FULL_TREBLE_OVERRIDE := true
 
-# TWRP
-ifeq ($(WITH_TWRP),true)
-$(call inherit-product, device/essential/mata/twrp/twrp.mk)
-else
 TARGET_RECOVERY_FSTAB := device/essential/mata/rootdir/etc/fstab.mata
-endif
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
