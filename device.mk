@@ -3,6 +3,8 @@ $(call inherit-product-if-exists, vendor/essential/mata/mata-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += device/essential/mata/overlay
+GAPPS_VARIANT := nano
+$(call inherit-product-if-exists, vendor/opengapps/build/opengapps-packages.mk)
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
