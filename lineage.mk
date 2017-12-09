@@ -7,6 +7,13 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit from mata device
 $(call inherit-product, device/essential/mata/device.mk)
 
+# GApps
+GAPPS_VARIANT := stock
+GAPPS_EXCLUDED_PACKAGES := EditorsDocs EditorsSheets EditorsSlides GoogleCamera PrebuiltNewsWeather
+GAPPS_FORCE_PACKAGE_OVERRIDES := true
+GAPPS_FORCE_PIXEL_LAUNCHER := true
+$(call inherit-product,vendor/opengapps/build/opengapps-packages.mk)
+
 PRODUCT_DEVICE := mata
 PRODUCT_NAME := lineage_mata
 PRODUCT_BRAND := essential
