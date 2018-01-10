@@ -404,3 +404,6 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     wpa_supplicant.conf \
     wpa_supplicant_wcn.conf
+
+$(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
+
