@@ -433,3 +433,5 @@ PRODUCT_PACKAGES += \
     wificond \
     wpa_supplicant \
     wpa_supplicant.conf
+
+$(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
