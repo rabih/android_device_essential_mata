@@ -434,4 +434,9 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     wpa_supplicant.conf
 
+# gapps
+GAPPS_VARIANT := stock
+
+
+
 $(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
