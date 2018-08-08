@@ -1,1 +1,1 @@
--include build/make/target/board/generic_arm64_ab/BoardConfig.mk
+-include build/make/target/board/generic_arm64/BoardConfig.mk
