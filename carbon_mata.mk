@@ -7,6 +7,9 @@ $(call inherit-product, vendor/carbon/config/gsm.mk)
 
 include build/make/target/product/aosp_arm64.mk
 
+# device
+$(call inherit-product, device/essential/mata/device.mk)
+
 # wifi
 PRODUCT_COPY_FILES += \
     device/essential/mata/wifi/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf \
